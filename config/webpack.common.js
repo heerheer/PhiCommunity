@@ -73,7 +73,7 @@ module.exports = {
 		whilePlaying: resolveSrc('whilePlaying/script.phi.community.core.js'),
 	},
 	output: {
-		path: resolve('dist'),
+		path: resolve('docs'),
 		filename: 'js/[name].[chunkhash].js',
 		assetModuleFilename: 'assets/[name].[contenthash:4][ext]',
 	},

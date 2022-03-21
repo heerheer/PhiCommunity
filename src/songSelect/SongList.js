@@ -46,7 +46,7 @@ function SongList({ defaultLevel = 'ez' }) {
 					source.connect(actx.destination);
 					source.start(0);
 				});
-				
+
 			});
 		DB()
 			.openDB('PhiCommunityPlayResults')
@@ -103,7 +103,7 @@ function SongList({ defaultLevel = 'ez' }) {
 			currentLevelSelected = [nextLevel];
 		}
 		fetch(
-			`https://charts.phicommunity.com.cn/${codename}/${songMeta['illustration']}`
+			`https://heerheer.github.io/PhiCommunity-Charts-Repo/${codename}/${songMeta['illustration']}`
 		)
 			.then((response) => response.blob())
 			.then((blob) => {
@@ -117,12 +117,12 @@ function SongList({ defaultLevel = 'ez' }) {
 			.catch((err) => {
 				console.err(
 					'获取曲绘失败!',
-					`url: https://charts.phicommunity.com.cn/${codename}/${songMeta['illustration']}`,
+					`url: https://heerheer.github.io/PhiCommunity-Charts-Repo/${codename}/${songMeta['illustration']}`,
 					err
 				);
 			});
 		fetch(
-			`https://charts.phicommunity.com.cn/${codename}/${songMeta['musicFile']}`
+			`https://heerheer.github.io/PhiCommunity-Charts-Repo/${codename}/${songMeta['musicFile']}`
 		)
 			.then((response) => response.blob())
 			.then((blob) => {
@@ -197,7 +197,7 @@ function SongList({ defaultLevel = 'ez' }) {
 			.catch((err) => {
 				console.err(
 					'获取歌曲失败!',
-					`url: https://charts.phicommunity.com.cn/${codename}/${songMeta['musicFile']}`,
+					`url: https://heerheer.github.io/PhiCommunity-Charts-Repo/${codename}/${songMeta['musicFile']}`,
 					err
 				);
 			});

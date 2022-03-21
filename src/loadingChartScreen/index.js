@@ -12,7 +12,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	const chart = parsedURLParams.get('c');
 	const level = parsedURLParams.get('l').toLowerCase();
 	fetch(
-		encodeURI('https://charts.phicommunity.com.cn/' + chart + '/meta.json')
+		encodeURI('https://heerheer.github.io/PhiCommunity-Charts-Repo/' + chart + '/meta.json')
 	)
 		.then((response) => response.json())
 		.then((songInfoObj) => {
@@ -34,7 +34,7 @@ window.addEventListener('DOMContentLoaded', () => {
 				.setAttribute(
 					'src',
 					encodeURI(
-						'https://charts.phicommunity.com.cn/' +
+						'https://heerheer.github.io/PhiCommunity-Charts-Repo/' +
 							chart +
 							'/' +
 							songInfoObj.illustration
@@ -44,7 +44,7 @@ window.addEventListener('DOMContentLoaded', () => {
 				'style',
 				'--background: url(' +
 					encodeURI(
-						'https://charts.phicommunity.com.cn/' +
+						'https://heerheer.github.io/PhiCommunity-Charts-Repo/' +
 							chart +
 							'/' +
 							songInfoObj.illustration

@@ -2182,7 +2182,7 @@ function qwqdraw2() {
 							prevBest = Math.round(res.score);
 							DB()
 								.updateKey(result.objectStore, {
-									codename: 
+									codename:
 									window.chartMetadata.codename +
 									'-' +
 									new URLSearchParams(
@@ -2233,7 +2233,7 @@ function qwqdraw2() {
 					.then((result) => {
 						DB()
 							.createKey(result.objectStore, {
-								codename: 
+								codename:
 								window.chartMetadata.codename +
 								'-' +
 								new URLSearchParams(
@@ -2270,7 +2270,7 @@ function qwqdraw2() {
 			});
 	}else{
 		location.href = '../LevelOver/index.html';
-	} 
+	}
 	return;
 }
 
@@ -2715,7 +2715,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	//	获取元数据
 	console.log('Fetching MetaData:', play);
-	fetch('https://charts.phicommunity.com.cn/' + play + '/meta.json')
+	fetch('https://heerheer.github.io/PhiCommunity-Charts-Repo/' + play + '/meta.json')
 		.then((res) => res.json())
 		.then((meta) => {
 			window.chartMetadata = meta;
@@ -2737,7 +2737,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			//	获取谱面
 			console.log('Fetching Chart:', play);
 			fetch(
-				'https://charts.phicommunity.com.cn/' +
+				'https://heerheer.github.io/PhiCommunity-Charts-Repo/' +
 					play +
 					'/' +
 					meta['chart' + level.toUpperCase()]
@@ -2780,7 +2780,7 @@ window.addEventListener('DOMContentLoaded', () => {
 				'style',
 				'--background: url(' +
 					encodeURI(
-						'https://charts.phicommunity.com.cn/' +
+						'https://heerheer.github.io/PhiCommunity-Charts-Repo/' +
 							meta['codename'] +
 							'/' +
 							meta['illustration']
@@ -2788,7 +2788,7 @@ window.addEventListener('DOMContentLoaded', () => {
 					')'
 			);
 			fetch(
-				'https://charts.phicommunity.com.cn/' +
+				'https://heerheer.github.io/PhiCommunity-Charts-Repo/' +
 					meta['codename'] +
 					'/' +
 					meta['illustration']
@@ -2811,7 +2811,7 @@ window.addEventListener('DOMContentLoaded', () => {
 				bgaVideo.muted='muted';
 				bgaVideo.style.display='none';
 				bgaVideo.setAttribute('crossOrigin', '');
-				bgaVideo.src='https://charts.phicommunity.com.cn/'+meta['codename']+'/'+meta['backgroundAnimation'];
+				bgaVideo.src='https://heerheer.github.io/PhiCommunity-Charts-Repo/'+meta['codename']+'/'+meta['backgroundAnimation'];
 				document.body.appendChild(bgaVideo);
 			}
 			//	判定线贴图
@@ -2822,7 +2822,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			if (meta.lineTexture) {
 				console.log('Line Texture Detected');
 				fetch(
-					'https://charts.phicommunity.com.cn/' +
+					'https://heerheer.github.io/PhiCommunity-Charts-Repo/' +
 						meta['codename'] +
 						'/' +
 						meta['lineTexture']
@@ -2837,13 +2837,13 @@ window.addEventListener('DOMContentLoaded', () => {
 						for (let i = 0; i < window.chartLine.length; i++) {
 							console.log(
 								'Fetching chart line texture:',
-								'https://charts.phicommunity.com.cn/' +
+								'https://heerheer.github.io/PhiCommunity-Charts-Repo/' +
 									meta['codename'] +
 									'/' +
 									chartLine[i].Image.toString()
 							);
 							fetch(
-								'https://charts.phicommunity.com.cn/' +
+								'https://heerheer.github.io/PhiCommunity-Charts-Repo/' +
 									meta['codename'] +
 									'/' +
 									chartLine[i].Image.toString()
@@ -2873,7 +2873,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			//	获取歌曲
 			console.log('Fetching Audio:', meta['musicFile']);
 			fetch(
-				'https://charts.phicommunity.com.cn/' +
+				'https://heerheer.github.io/PhiCommunity-Charts-Repo/' +
 					meta['codename'] +
 					'/' +
 					meta['musicFile']

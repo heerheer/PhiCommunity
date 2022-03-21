@@ -165,7 +165,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	// }
 	// gradeImage
 	//	获取歌曲信息
-	fetch('https://charts.phicommunity.com.cn/' + play + '/meta.json')
+	fetch('https://heerheer.github.io/PhiCommunity-Charts-Repo/' + play + '/meta.json')
 		.then((response) => response.json())
 		.then((data) => {
 			window.window.playResult = {
@@ -193,7 +193,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			case 0:
 				levelOverAudio=LevelOver0;
 				break;
-	
+
 			case 1:
 				levelOverAudio=LevelOver1;
 				break;
@@ -205,7 +205,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			case 3:
 				levelOverAudio=LevelOver3;
 				break;
-		
+
 			default:
 				break;
 			}
@@ -227,7 +227,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			document.body.setAttribute(
 				'style',
 				`--background:url(${encodeURI(
-					'https://charts.phicommunity.com.cn/' +
+					'https://heerheer.github.io/PhiCommunity-Charts-Repo/' +
 						window.playResult.play +
 						'/' +
 						window.playResult.songInfo.illustration
@@ -238,7 +238,7 @@ window.addEventListener('DOMContentLoaded', () => {
 				.setAttribute(
 					'src',
 					encodeURI(
-						'https://charts.phicommunity.com.cn/' +
+						'https://heerheer.github.io/PhiCommunity-Charts-Repo/' +
 							play +
 							'/' +
 							window.playResult.songInfo.illustration

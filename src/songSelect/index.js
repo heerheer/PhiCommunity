@@ -60,7 +60,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	window.chapterName = new URLSearchParams(new URL(location.href).search).get(
 		'c'
 	);
-	fetch('https://api.github.com/repos/HanHan233/PhiCommunity-Charts-Repo/contents')
+	fetch('https://api.github.com/repos/heerheer/PhiCommunity-Charts-Repo/contents')
 		.then((res) => res.json())
 		.then((response) => {
 			window.songCodeNameList = new Array();
@@ -78,7 +78,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			window.songMetaList = new Array();
 	
 			for (let i = 0; i < window.songCodeNameList.length; i++) {
-				fetch(encodeURI('https://charts.phicommunity.com.cn/' + window.songCodeNameList[i] + '/meta.json'))
+				fetch(encodeURI('https://heerheer.github.io/PhiCommunity-Charts-Repo/' + window.songCodeNameList[i] + '/meta.json'))
 					.then((res) => res.json())
 					.then(json=>{
 						window.songMetaList.push(json);
